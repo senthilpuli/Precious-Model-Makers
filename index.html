@@ -911,28 +911,37 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
   .container { padding:0 1.25rem; }
 
   /* Hero — mobile redesign */
-  #hero { min-height:100svh; display:flex; flex-direction:column; justify-content:flex-end; }
-  .hero-image-bg::after {
-    background:
-      linear-gradient(180deg, rgba(5,8,22,0.6) 0%, rgba(5,8,22,0.3) 40%, rgba(5,8,22,0.92) 80%, rgba(5,8,22,0.98) 100%);
-  }
-  .hero-content {
-    padding:0 1.25rem 0; padding-top:5.5rem;
-    max-width:100%;
-  }
-  .hero-overline { margin-bottom:1rem; }
-  .hero-overline-text { letter-spacing:0.22em; }
-  .hero-title { line-height:1.1; margin-bottom:1rem; }
-  .hero-sub {
-    max-width:100%; margin-bottom:1.8rem;
-    font-size:0.9rem; line-height:1.78;
-  }
-  .hero-actions {
-    flex-direction:column; gap:0.75rem;
-    padding-bottom:1.5rem;
-  }
-  .hero-actions .btn-gold,
-  .hero-actions .btn-ghost { width:100%; padding:1rem 1.5rem; font-size:0.68rem; }
+ /* Hero — mobile redesign kulla idha update pannu */
+#hero { 
+  min-height: 100svh; 
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; /* flex-end-ah thookitu CENTER nu podu, content mela varum */
+}
+
+.hero-content {
+  padding: 0 1.25rem 0; 
+  padding-top: 2.5rem; /* 5.5rem-ah 2.5rem-ah kammi pannidu */
+  max-width: 100%;
+}
+
+.hero-title { 
+  line-height: 1.1; 
+  margin-bottom: 0.6rem; /* 1rem gap-ah kammi pannu */
+}
+
+.hero-sub {
+  max-width: 100%; 
+  margin-bottom: 1.2rem; /* 1.8rem-ah 1.2rem-ah mathu */
+  font-size: 0.9rem; 
+  line-height: 1.78;
+}
+
+.hero-actions {
+  flex-direction: column; 
+  gap: 0.75rem;
+  padding-bottom: 0; /* padding-bottom-ah zero pannidu */
+}
 
   /* Mobile metrics strip */
   .hero-metrics { display:none; }
@@ -974,8 +983,28 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
   .about-stat { padding:1.1rem 0.75rem; }
 
   /* Categories */
-  .categories-header { flex-direction:column; gap:1rem; margin-bottom:2.5rem; }
-  .categories-header .section-body { text-align:left !important; max-width:100%; }
+  /* Categories Section Fix */
+  .categories-header { 
+    flex-direction: column; 
+    align-items: center; /* Ithu thaan center pannum */
+    text-align: center; 
+    gap: 1rem; 
+    margin-bottom: 2.5rem; 
+  }
+
+  .categories-header .section-badge { 
+    justify-content: center; /* Gold line center aydum */
+    width: 100%;
+  }
+
+  .categories-header .section-title {
+    text-align: center; /* "Our Craft Domains" center aydum */
+  }
+
+  .categories-header .section-body { 
+    text-align: center !important; /* "Six disciplines..." line center aydum */
+    max-width: 100%; 
+  }
   .cat-grid { grid-template-columns:1fr; }
   .cat-thumb { height:200px; }
 
@@ -1070,7 +1099,7 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
 <nav id="navbar">
   <a href="#" class="nav-logo">
     <div class="nav-logo-mark">
-      <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=80&h=80&fit=crop&auto=format&q=80" alt="Precious Model Makers Logo" onerror="this.style.display='none';">
+      <img src="logo.png" alt="Precious Model Makers Logo" onerror="this.style.display='none';">
       <svg style="display:none;width:26px;height:26px;" viewBox="0 0 28 28" fill="none">
         <path d="M5 19 Q6 22 9 23 L19 23 Q22 22 23 19 L22 18 L6 18 Z" stroke="#d4af37" stroke-width="1" fill="rgba(212,175,55,0.08)"/>
         <rect x="7" y="15" width="14" height="3" stroke="#d4af37" stroke-width="0.7" fill="none" opacity="0.7"/>

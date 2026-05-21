@@ -1400,7 +1400,10 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
       Into Reality
     </h1>
     <p class="hero-sub">
-      Museum-grade precision models for India's defence forces, aerospace agencies, and architectural developers. Every detail, every scale, perfected.
+     Museum-grade precision miniature
+models of Ships, Aircraft, Tanks,
+Missiles, Submarines, etc. Every
+detail, every scale, perfected.
     </p>
     <div class="hero-actions">
       <a href="#gallery" class="btn-gold">View Portfolio →</a>
@@ -1467,10 +1470,7 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
         <div class="about-panel">
           <img src="Cha.png" alt="Precision Scale Model Craftsmanship Workshop" loading="lazy">
         </div>
-        <div class="about-glass-badge">
-          <div class="badge-big">15<span style="font-size:1.2rem;color:#b8922e">+</span></div>
-          <div class="badge-small">Years of Precision Craft</div>
-        </div>
+        
       </div>
 
       <div class="about-text-wrap">
@@ -1488,19 +1488,8 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
           </p>
         </div>
 
-        <div class="about-stats reveal d2">
-          <div class="about-stat">
-            <span class="about-stat-num" data-target="15" data-suffix="+">0</span>
-            <span class="about-stat-label">Years Experience</span>
-          </div>
-          <div class="about-stat">
-            <span class="about-stat-num" data-target="200" data-suffix="+">0</span>
-            <span class="about-stat-label">Models Delivered</span>
-          </div>
-          <div class="about-stat">
-            <span class="about-stat-num" data-target="100" data-suffix="%">0</span>
-            <span class="about-stat-label">Accuracy Standard</span>
-          </div>
+       
+        
         </div>
       </div>
 
@@ -2320,7 +2309,7 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
           <svg viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
         </div>
         <div class="g-item-bg">
-          <img src="lll.png" alt="Luxury Township Architectural Scale Model" loading="lazy">
+          <img src="ship 1.jpeg" alt="Luxury Township Architectural Scale Model" loading="lazy">
         </div>
         <div class="g-item-overlay">
           <span class="g-tag">Architecture · Township</span>
@@ -2827,7 +2816,12 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
             </div>
             <div class="why-feature-text">
               <h4>Museum-Grade Materials</h4>
-              <p>We use aerospace-grade resins, precision photo-etch brass, and military-specification paints for models that endure decades of display.</p>
+              <p>We use aerospace-grade
+resins, precision photoetched brass & Metal,
+military-specification paints,
+and high-quality fibreglass
+for models that endure
+decades of display.</p>
             </div>
           </div>
 
@@ -2838,8 +2832,16 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
               </svg>
             </div>
             <div class="why-feature-text">
-              <h4>Defence Sector Trusted</h4>
-              <p>Preferred vendor for the Indian Navy, Air Force and Coast Guard — with a proven track record of timely delivery and classified-project discretion.</p>
+              <h4>Defence Sector Projects</h4>
+              <p>As a sub vendor we made
+Outstanding, look-alike miniature
+models of Ships, Aircrafts and
+Architectures for
+Indian navy,
+Coast Guard,
+Light House, Chennai
+DRDO,
+Cochin Shipyard,etc.</p>
             </div>
           </div>
 
@@ -2869,71 +2871,377 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
         <div class="why-panel">
           <img src="resized_5x7cm_image.png" alt="Precision Model Making Workshop — Engineers at Work" loading="lazy">
         </div>
-        <div class="why-certs">
-          <h5>Credentials &amp; Recognitions</h5>
-          <div class="cert-item"><div class="cert-dot"></div>Indian Naval Approved Vendor</div>
-          <div class="cert-item"><div class="cert-dot"></div>DRDO Exhibition Partner</div>
-          <div class="cert-item"><div class="cert-dot"></div>ISO Quality Standard Certified</div>
-          <div class="cert-item"><div class="cert-dot"></div>15+ Years Heritage — Est. 2009</div>
-        </div>
+        
       </div>
     </div>
   </div>
 </section>
 
 <!-- ═══════════ TESTIMONIALS ═══════════ -->
-<section id="testimonials">
+<!-- ═══════════ CLIENTELE SECTION (REPLACE entire #testimonials section) ═══════════ -->
+<!--
+  INSTRUCTIONS:
+  1. Remove the entire <section id="testimonials">...</section> block from your HTML
+  2. Remove the custom cursor HTML: the two <div class="cursor" ...> elements at the top of <body>
+  3. Remove the custom cursor CSS block (lines starting with /* ─── CUSTOM CURSOR (desktop only) ─── */)
+  4. Remove the custom cursor JS block (the `if (window.matchMedia('(pointer:fine)').matches)` block)
+  5. Paste this entire block in place of the removed testimonials section
+-->
+
+<style>
+/* ═══════════════════════════════════════════════════════
+   CLIENTELE SHOWCASE — Luxury Dark Corporate
+   ═══════════════════════════════════════════════════════ */
+#clientele {
+  padding: var(--sp-section) 0;
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ambient background glow */
+#clientele::before {
+  content: '';
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(212,175,55,0.03) 0%, transparent 70%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+/* Horizontal gold rule */
+#clientele::after {
+  content: '';
+  position: absolute;
+  top: 0; left: var(--sp-container); right: var(--sp-container);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,175,55,0.22), transparent);
+}
+
+.clientele-header {
+  text-align: center;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+.clientele-header .section-badge {
+  justify-content: center;
+}
+.clientele-header .section-body {
+  margin: 1rem auto 0;
+  text-align: center;
+}
+
+/* ── Grid of client cards ── */
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1px;
+  background: var(--glass-border);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* ── Individual client card ── */
+.client-card {
+  background: var(--bg-secondary);
+  padding: clamp(1.4rem, 2.5vw, 2rem) clamp(1.2rem, 2vw, 1.6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.85rem;
+  text-align: center;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.45s cubic-bezier(0.16,1,0.3,1);
+  min-height: 148px;
+}
+
+/* Hover shimmer fill */
+.client-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212,175,55,0.06) 0%, rgba(212,175,55,0.02) 60%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.45s cubic-bezier(0.16,1,0.3,1);
+}
+.client-card:hover::before { opacity: 1; }
+
+/* Gold top accent on hover */
+.client-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.client-card:hover::after { transform: scaleX(1); }
+.client-card:hover { background: rgba(11,18,40,0.98); }
+
+/* Monogram badge */
+.client-monogram {
+  width: 44px; height: 44px;
+  border-radius: 3px;
+  border: 1px solid var(--gold-border);
+  background: rgba(212,175,55,0.06);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.80rem; font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+  transition: border-color 0.4s, background 0.4s, box-shadow 0.4s;
+  position: relative; z-index: 1;
+}
+.client-card:hover .client-monogram {
+  border-color: rgba(212,175,55,0.55);
+  background: rgba(212,175,55,0.12);
+  box-shadow: 0 0 20px rgba(212,175,55,0.15);
+}
+
+/* Client name */
+.client-name {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(0.78rem, 1.4vw, 0.90rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  line-height: 1.3;
+  position: relative; z-index: 1;
+  transition: color 0.3s;
+}
+.client-card:hover .client-name { color: #fff; }
+
+/* Client location / sub-label */
+.client-loc {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  position: relative; z-index: 1;
+  transition: color 0.3s;
+}
+.client-card:hover .client-loc { color: var(--gold); }
+
+/* ── Divider line with text ── */
+.clientele-divider {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin: clamp(2.5rem, 5vw, 4rem) 0 0;
+}
+.clientele-divider-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+}
+.clientele-divider-text {
+  font-size: 0.56rem;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ── Sector tags row ── */
+.clientele-sectors {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: 1.4rem;
+}
+.sector-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.42rem 1.1rem;
+  border: 1px solid var(--glass-border);
+  border-radius: 2px;
+  font-size: 0.58rem;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  background: transparent;
+  transition: border-color 0.3s, color 0.3s, background 0.3s;
+}
+.sector-tag:hover {
+  border-color: var(--gold-border);
+  color: var(--gold);
+  background: var(--gold-soft);
+}
+.sector-tag-dot {
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: var(--gold);
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+/* ── RESPONSIVE ── */
+
+/* 4-col at 1100px */
+@media (max-width: 1100px) {
+  .client-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 3-col at 860px */
+@media (max-width: 860px) {
+  .client-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 2-col at 600px */
+@media (max-width: 600px) {
+  .client-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .client-card {
+    min-height: 130px;
+    padding: 1.4rem 1rem;
+  }
+  .client-monogram {
+    width: 38px; height: 38px;
+    font-size: 0.72rem;
+  }
+  .client-name {
+    font-size: 0.80rem;
+  }
+  .clientele-sectors {
+    gap: 0.5rem;
+  }
+}
+
+/* 2-col small — ensure no overflow on 360px */
+@media (max-width: 380px) {
+  .client-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .client-name { font-size: 0.74rem; }
+  .sector-tag { font-size: 0.54rem; padding: 0.38rem 0.8rem; }
+}
+</style>
+
+<!-- ── SECTION ── -->
+<section id="clientele">
   <div class="container">
-    <div class="testi-header">
+
+    <div class="clientele-header">
       <div class="section-badge reveal">
         <div class="section-badge-line"></div>
-        <span class="section-badge-text">Client Testimonials</span>
+        <span class="section-badge-text">Our Clients</span>
       </div>
       <h2 class="section-title reveal d1">Trusted by the <em>Elite</em></h2>
+      <p class="section-body reveal d2">
+        From India's premier defence shipyards to global engineering conglomerates —<br class="d-none d-md-inline">
+        our precision models are displayed in boardrooms, war rooms, and exhibition halls across the nation.
+      </p>
     </div>
 
-    <div class="testi-grid reveal d2">
-      <div class="testi-card">
-        <span class="testi-quote-mark">"</span>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">The INS Vikrant model displayed at our command headquarters is nothing short of extraordinary. Every rivet, antenna and deck fitting is flawlessly reproduced. Our officers are in awe.</p>
-        <div class="testi-meta">
-          <div class="testi-avatar">RKS</div>
-          <div>
-            <span class="testi-name">Commodore R. K. Sharma</span>
-            <span class="testi-role">Indian Navy — Western Naval Command</span>
-          </div>
-        </div>
+    <!-- 10 client cards in responsive grid -->
+    <div class="client-grid reveal d2">
+
+      <div class="client-card">
+        <div class="client-monogram">GR</div>
+        <div class="client-name">Garden Reach Shipbuilders &amp; Engineers</div>
+        <div class="client-loc">Kolkata — GRSE</div>
       </div>
 
-      <div class="testi-card">
-        <span class="testi-quote-mark">"</span>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">We commissioned a 1:48 scale Tejas LCA for the Aero India expo. The model became the centrepiece of our pavilion and generated exceptional attention from international delegations.</p>
-        <div class="testi-meta">
-          <div class="testi-avatar">AM</div>
-          <div>
-            <span class="testi-name">Group Captain A. Menon</span>
-            <span class="testi-role">Indian Air Force — Exhibition Division</span>
-          </div>
-        </div>
+      <div class="client-card">
+        <div class="client-monogram">HS</div>
+        <div class="client-name">Hindustan Shipyard Ltd</div>
+        <div class="client-loc">Visakhapatnam</div>
       </div>
 
-      <div class="testi-card">
-        <span class="testi-quote-mark">"</span>
-        <div class="testi-stars">★★★★★</div>
-        <p class="testi-text">Their architectural model for our luxury township project was phenomenal. The LED lighting and landscape detail won us the client on the spot. Absolutely worth every rupee invested.</p>
-        <div class="testi-meta">
-          <div class="testi-avatar">PK</div>
-          <div>
-            <span class="testi-name">Priya Krishnaswamy</span>
-            <span class="testi-role">Director — Prestige Estates Projects</span>
-          </div>
-        </div>
+      <div class="client-card">
+        <div class="client-monogram">SP</div>
+        <div class="client-name">SPIC</div>
+        <div class="client-loc">Chennai</div>
       </div>
+
+      <div class="client-card">
+        <div class="client-monogram">L&T</div>
+        <div class="client-name">Larsen &amp; Toubro</div>
+        <div class="client-loc">Chennai</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-monogram">AE</div>
+        <div class="client-name">Arrow Engineering Industries</div>
+        <div class="client-loc">Hyderabad</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-monogram">AT</div>
+        <div class="client-name">Atlanta Technocrafts</div>
+        <div class="client-loc">Vizag</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-monogram">VA</div>
+        <div class="client-name">Vinayaka Agencies</div>
+        <div class="client-loc">Chennai</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-monogram">AW</div>
+        <div class="client-name">Aawishkara</div>
+        <div class="client-loc">Bengaluru</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-monogram">SS</div>
+        <div class="client-name">Shoft Shipyard Pvt Ltd</div>
+        <div class="client-loc">India</div>
+      </div>
+
+      <div class="client-card">
+        <div class="client-monogram">AI</div>
+        <div class="client-name">Attah Infomedia Pvt Ltd</div>
+        <div class="client-loc">India</div>
+      </div>
+
+      <!-- Sadhav gets full-width on last row if odd — handled gracefully by grid auto-fill -->
+      <div class="client-card" style="grid-column: span 1;">
+        <div class="client-monogram">SO</div>
+        <div class="client-name">Sadhav Offshore</div>
+        <div class="client-loc">India</div>
+      </div>
+
+    </div><!-- /client-grid -->
+
+    <!-- Divider + sector tags -->
+    <div class="clientele-divider reveal d3">
+      <div class="clientele-divider-line"></div>
+      <span class="clientele-divider-text">Sectors Served</span>
+      <div class="clientele-divider-line"></div>
     </div>
+
+    <div class="clientele-sectors reveal d4">
+      <div class="sector-tag"><span class="sector-tag-dot"></span>Indian Navy</div>
+      <div class="sector-tag"><span class="sector-tag-dot"></span>Coast Guard</div>
+      <div class="sector-tag"><span class="sector-tag-dot"></span>DRDO</div>
+      <div class="sector-tag"><span class="sector-tag-dot"></span>Defence Shipyards</div>
+      <div class="sector-tag"><span class="sector-tag-dot"></span>Aerospace</div>
+      <div class="sector-tag"><span class="sector-tag-dot"></span>Oil &amp; Gas</div>
+      <div class="sector-tag"><span class="sector-tag-dot"></span>Architecture</div>
+      <div class="sector-tag"><span class="sector-tag-dot"></span>Heavy Engineering</div>
+    </div>
+
   </div>
 </section>
+<!-- ═══════════ END CLIENTELE SECTION ═══════════ -->
+
 
 <!-- ═══════════ CONTACT ═══════════ -->
 <section id="contact">
@@ -2972,7 +3280,9 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
           </div>
           <div>
             <span class="contact-label">Location</span>
-            <span class="contact-value">Cuddalore, Tamil Nadu, India</span>
+            <span class="contact-value">110/1A, Ramdoss Street, Pudupalayam,
+Cuddalore,Tamil Nadu, Pin – 607 001
+, India</span>
           </div>
         </div>
 
@@ -3092,8 +3402,8 @@ footer { background:var(--bg-primary); border-top:1px solid var(--glass-border);
       <div class="footer-col">
         <h5>Contact</h5>
         <a href="mailto:preciousmodelmakers@gmail.com">preciousmodelmakers@gmail.com</a>
-        <a href="https://wa.me/919865295050">+91 98652 95050</a>
-        <a href="#contact">Chennai, Tamil Nadu</a>
+        <a href="https://wa.me/9942150509">+91 9942150509</a>
+        <a href="#contact">Cuddalore, Tamil Nadu</a>
         <a href="#contact">Commission a Model →</a>
       </div>
     </div>
@@ -3123,26 +3433,7 @@ window.addEventListener('load', function() {
 });
 
 /* ── Custom Cursor (desktop only) ── */
-if (window.matchMedia('(pointer:fine)').matches) {
-  var cOuter = document.getElementById('cursorOuter');
-  var cInner = document.getElementById('cursorInner');
-  var cRing  = document.getElementById('cursorRing');
-  var mx = 0, my = 0, rx = 0, ry = 0;
-  document.addEventListener('mousemove', function(e){
-    mx = e.clientX; my = e.clientY;
-    if (cInner) { cInner.style.left = mx + 'px'; cInner.style.top = my + 'px'; }
-  });
-  function lerpCursor() {
-    rx += (mx - rx) * 0.12; ry += (my - ry) * 0.12;
-    if (cOuter) { cOuter.style.left = rx + 'px'; cOuter.style.top = ry + 'px'; }
-    requestAnimationFrame(lerpCursor);
-  }
-  lerpCursor();
-  document.querySelectorAll('a, button, .cat-card, .g-item').forEach(function(el){
-    el.addEventListener('mouseenter', function(){ if(cRing) cRing.classList.add('expand'); });
-    el.addEventListener('mouseleave', function(){ if(cRing) cRing.classList.remove('expand'); });
-  });
-}
+
 
 /* ── Navbar scroll ── */
 var navbar = document.getElementById('navbar');

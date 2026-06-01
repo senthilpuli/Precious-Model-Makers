@@ -2277,7 +2277,7 @@ detail, every scale, perfected.
           <svg viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
         </div>
         <div class="g-item-bg">
-          <img src="uu.png" alt="INS Vikrant Aircraft Carrier — Precision Scale Model" loading="lazy">
+          <img src="mla.jpeg" alt="INS Vikrant Aircraft Carrier — Precision Scale Model" loading="lazy">
         </div>
         <div class="g-item-overlay">
           <span class="g-tag">Naval · Aircraft Carrier</span>
@@ -3130,6 +3130,489 @@ Cochin Shipyard,etc.</p>
   .client-name { font-size: 0.74rem; }
   .sector-tag { font-size: 0.54rem; padding: 0.38rem 0.8rem; }
 }
+<!--
+  ═══════════════════════════════════════════════════════════════════
+  PRECIOUS MODEL MAKERS — FEATURED MASTERPIECE SECTION PATCH
+  ═══════════════════════════════════════════════════════════════════
+
+  HOW TO APPLY THIS PATCH (2 changes only):
+  ─────────────────────────────────────────
+  CHANGE 1 — Navbar "Projects" link
+    In your <ul class="nav-links">, AFTER the <li><a href="#gallery">Gallery</a></li> line,
+    add this:
+      <li><a href="#featured">Projects</a></li>
+    Also add the same in your mobile nav <div> list:
+      <div class="mobile-nav-item">
+        <a href="#featured" onclick="closeMobile()">Projects</a>
+      </div>
+
+
+
+
+
+<style id="FEATURED_SECTION_CSS">
+
+/* ═══════════════════════════════════════════════════════
+   FEATURED MASTERPIECE — Special Project Showcase
+   ═══════════════════════════════════════════════════════ */
+#featured {
+  padding: var(--sp-section) 0;
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Atmospheric backdrop ── */
+#featured::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, rgba(212,175,55,0.05) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 80% at 0% 100%, rgba(77,163,255,0.04) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Gold horizontal rule at top */
+#featured::after {
+  content: '';
+  position: absolute;
+  top: 0; left: var(--sp-container); right: var(--sp-container);
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(212,175,55,0.35), transparent);
+}
+
+/* ── Section header ── */
+.featured-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: clamp(3rem, 6vw, 5.5rem);
+}
+
+.featured-header-left {}
+.featured-header-right {
+  max-width: 320px;
+  text-align: right;
+}
+.featured-header-right p {
+  font-size: var(--fs-body);
+  font-weight: 300;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+/* ── Hero image banner ── */
+.featured-hero-image {
+  position: relative;
+  width: 100%;
+  height: clamp(260px, 38vw, 540px);
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.65), 0 0 0 1px rgba(212,175,55,0.08);
+}
+
+.featured-hero-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  filter: brightness(0.72) saturate(0.88) contrast(1.06);
+  transition: transform 1.2s cubic-bezier(0.16,1,0.3,1), filter 0.8s;
+  display: block;
+}
+.featured-hero-image:hover img {
+  transform: scale(1.04);
+  filter: brightness(0.82) saturate(0.95) contrast(1.06);
+}
+
+/* Cinematic vignette on hero */
+.featured-hero-image::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 1;
+  background:
+    linear-gradient(180deg, rgba(5,8,22,0.18) 0%, transparent 30%, transparent 55%, rgba(5,8,22,0.72) 100%),
+    linear-gradient(90deg, rgba(5,8,22,0.30) 0%, transparent 25%, transparent 75%, rgba(5,8,22,0.22) 100%);
+  pointer-events: none;
+}
+
+/* Gold top accent on hover */
+.featured-hero-image::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px; z-index: 2;
+  background: linear-gradient(90deg, transparent 0%, var(--gold) 40%, rgba(212,175,55,0.6) 70%, transparent 100%);
+  transform: scaleX(0); transform-origin: left;
+  transition: transform 0.8s cubic-bezier(0.16,1,0.3,1);
+}
+.featured-hero-image:hover::after { transform: scaleX(1); }
+
+/* Floating badge on hero image */
+.featured-hero-badge {
+  position: absolute;
+  bottom: 1.8rem; left: 2rem; z-index: 3;
+  display: flex; align-items: center; gap: 1rem;
+}
+.featured-hero-badge-pill {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  padding: 0.45rem 1.1rem;
+  background: rgba(5,8,22,0.88);
+  border: 1px solid rgba(212,175,55,0.40);
+  border-radius: 2px;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font-size: 0.56rem; letter-spacing: 0.28em; text-transform: uppercase;
+  color: var(--gold);
+}
+.featured-hero-badge-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%; background: var(--gold);
+  animation: featuredPulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+@keyframes featuredPulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.7); }
+}
+
+/* ── Bottom two-column layout ── */
+.featured-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: clamp(2.5rem, 4vw, 4rem);
+}
+
+/* ── Detail image (second photo) ── */
+.featured-detail-image {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.50);
+  cursor: pointer;
+}
+.featured-detail-image img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center 50%;
+  filter: brightness(0.68) saturate(0.85) contrast(1.05);
+  transition: transform 0.9s cubic-bezier(0.16,1,0.3,1), filter 0.6s;
+  display: block;
+}
+.featured-detail-image:hover img {
+  transform: scale(1.07);
+  filter: brightness(0.82) saturate(0.95) contrast(1.06);
+}
+
+/* Gradient + label overlay on detail image */
+.featured-detail-image::before {
+  content: '';
+  position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(180deg, transparent 40%, rgba(5,8,22,0.78) 100%);
+  pointer-events: none;
+}
+.featured-detail-image::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px; z-index: 2;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0); transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.featured-detail-image:hover::after { transform: scaleX(1); }
+
+.featured-detail-label {
+  position: absolute; bottom: 1.2rem; left: 1.2rem; z-index: 3;
+  font-size: 0.60rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ── Specs panel ── */
+.featured-specs-panel {
+  background: var(--bg-primary);
+  border: 1px solid var(--glass-border);
+  border-radius: 6px;
+  padding: clamp(1.6rem, 3vw, 2.4rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle inner glow */
+.featured-specs-panel::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(212,175,55,0.04) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+.featured-specs-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+  font-weight: 300;
+  color: var(--text-primary);
+  line-height: 1.25;
+  position: relative; z-index: 1;
+}
+.featured-specs-title em {
+  font-style: italic;
+  background: linear-gradient(135deg, #f2d060, var(--gold), #b88d28);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+
+/* Spec rows */
+.featured-spec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--glass-border);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative; z-index: 1;
+}
+.featured-spec-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.1rem;
+  background: rgba(255,255,255,0.015);
+  border-bottom: 1px solid var(--glass-border);
+  gap: 1rem;
+  transition: background 0.3s;
+}
+.featured-spec-row:last-child { border-bottom: none; }
+.featured-spec-row:hover { background: rgba(212,175,55,0.04); }
+
+.featured-spec-key {
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  flex-shrink: 0;
+}
+.featured-spec-val {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(0.82rem, 1.5vw, 0.95rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  text-align: right;
+}
+.featured-spec-val.gold { color: var(--gold); }
+
+/* CTA area in panel */
+.featured-panel-cta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  position: relative; z-index: 1;
+}
+.featured-panel-note {
+  font-size: 0.68rem;
+  color: var(--text-dim);
+  font-weight: 300;
+  line-height: 1.6;
+  flex: 1;
+  min-width: 120px;
+}
+
+/* ── Bottom flourish — achievement strip ── */
+.featured-achievement-strip {
+  display: flex;
+  gap: 1px;
+  background: var(--glass-border);
+  border: 1px solid var(--glass-border);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.featured-achievement {
+  flex: 1;
+  background: var(--bg-primary);
+  padding: 1.4rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  position: relative;
+  transition: background 0.4s;
+  overflow: hidden;
+}
+.featured-achievement:hover { background: rgba(11,18,40,0.98); }
+.featured-achievement::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  transform: scaleX(0); transform-origin: center;
+  transition: transform 0.5s cubic-bezier(0.16,1,0.3,1);
+}
+.featured-achievement:hover::after { transform: scaleX(1); }
+
+.featured-ach-num {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.4rem, 2.8vw, 2rem);
+  font-weight: 300;
+  color: var(--gold);
+  line-height: 1;
+}
+.featured-ach-label {
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  line-height: 1.4;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  .featured-header { flex-direction: column; align-items: flex-start; }
+  .featured-header-right { text-align: left; max-width: 100%; }
+  .featured-grid { grid-template-columns: 1fr; }
+  .featured-detail-image { aspect-ratio: 16/9; }
+  .featured-achievement-strip { flex-wrap: wrap; }
+  .featured-achievement { flex: 1 1 calc(50% - 1px); min-width: 140px; }
+}
+
+@media (max-width: 600px) {
+  .featured-hero-image { height: clamp(200px, 55vw, 280px); }
+  .featured-hero-badge { bottom: 1rem; left: 1rem; }
+  .featured-specs-panel { padding: 1.4rem; }
+  .featured-achievement { padding: 1.1rem 1.2rem; }
+  .featured-achievement-strip { border-radius: 3px; }
+}
+
+@media (max-width: 480px) {
+  .featured-achievement { flex: 1 1 100%; }
+  .featured-achievement-strip { flex-direction: column; }
+}
+
+</style>
+
+
+
+<section id="featured">
+  <div class="container">
+
+    <!-- ── Section header ── -->
+    <div class="featured-header">
+      <div class="featured-header-left">
+        <div class="section-badge reveal">
+          <div class="section-badge-line"></div>
+          <span class="section-badge-text">Special Project</span>
+        </div>
+        <h2 class="section-title reveal d1">Featured <em>Masterpiece</em></h2>
+      </div>
+      <div class="featured-header-right reveal d2">
+        
+      </div>
+    </div>
+
+    <!-- ── Hero banner image ── -->
+    <div class="featured-hero-image reveal d2">
+      <!-- Replace src with your actual image path when ready -->
+      <img
+        src="spl.jpeg"
+        alt="INS Delhi Class Destroyer — 15-Foot Scale Model by Precious Model Makers"
+        loading="lazy"
+      >
+      <div class="featured-hero-badge">
+        <div class="featured-hero-badge-pill">
+          <span class="featured-hero-badge-dot"></span>
+          INS Delhi Class — 15 ft Scale Model
+        </div>
+        <div class="featured-hero-badge-pill">
+          Naval · Defence
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Two-column: detail photo + spec panel ── -->
+    <div class="featured-grid reveal d3">
+
+      <!-- Detail / close-up photo -->
+      <div class="featured-detail-image">
+        <!-- Replace src with your actual close-up image path when ready -->
+        <img
+          src="mm.jpeg"
+          alt="INS Delhi Class Scale Model — Detail View, Deck Fittings and Superstructure"
+          loading="lazy"
+        >
+        <div class="featured-detail-label">Superstructure &amp; Deck Detail</div>
+      </div>
+
+      <!-- Specifications panel -->
+      <div class="featured-specs-panel">
+
+        <div>
+          <div class="featured-specs-title">
+            INS Delhi Class<br><em>Destroyer</em>
+          </div>
+        </div>
+
+        <div class="featured-spec-list">
+          <div class="featured-spec-row">
+            <span class="featured-spec-key">Model Length</span>
+            <span class="featured-spec-val gold">15 Feet</span>
+          </div>
+          <div class="featured-spec-row">
+            <span class="featured-spec-key">Category</span>
+            <span class="featured-spec-val">Naval Destroyer</span>
+          </div>
+          <div class="featured-spec-row">
+            <span class="featured-spec-key">Commissioned By</span>
+            <span class="featured-spec-val">Cochin Shipyard Ltd</span>
+          </div>
+          <div class="featured-spec-row">
+            <span class="featured-spec-key">Purpose</span>
+            <span class="featured-spec-val">Exhibition Centrepiece</span>
+          </div>
+          <div class="featured-spec-row">
+            <span class="featured-spec-key">Craft Standard</span>
+            <span class="featured-spec-val gold">Museum-Grade Precision</span>
+          </div>
+          <div class="featured-spec-row">
+            <span class="featured-spec-key">Maker</span>
+            <span class="featured-spec-val">Precious Model Makers</span>
+          </div>
+        </div>
+
+        <div class="featured-panel-cta">
+          <div class="featured-panel-note">
+            Interested in a similar large-format commission? We specialise in oversized naval models for corporate lobbies, exhibitions and defence institutions.
+          </div>
+          <a href="#contact" class="btn-gold" style="flex-shrink:0">Commission →</a>
+        </div>
+
+      </div>
+    </div><!-- /featured-grid -->
+
+    <!-- ── Achievement strip ── -->
+    <div class="featured-achievement-strip reveal d4">
+      <div class="featured-achievement">
+        <div class="featured-ach-num">15 ft</div>
+        <div class="featured-ach-label">Model Length<br>Life-Size Impression</div>
+      </div>
+      <div class="featured-achievement">
+        <div class="featured-ach-num">1:50</div>
+        <div class="featured-ach-label">Scale Ratio<br>Blueprint Accurate</div>
+      </div>
+      <div class="featured-achievement">
+        <div class="featured-ach-num">100<span style="font-size:0.6em;color:var(--text-dim)">%</span></div>
+        <div class="featured-ach-label">Hand-Crafted<br>Zero CNC Assembly</div>
+      </div>
+      
+       
+    </div>
+
+  </div><!-- /container -->
+</section>
+
+<!-- END FEATURED MASTERPIECE SECTION -->
+
 </style>
 
 <!-- ── SECTION ── -->
